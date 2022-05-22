@@ -10,9 +10,7 @@ import ru.kata.spring.boot_security.demo.service.UserService;
 import java.security.Principal;
 import java.util.List;
 
-
 @RestController
-
 public class MyRestController {
     private final UserService userService;
     private final UserRepository userRepository;
