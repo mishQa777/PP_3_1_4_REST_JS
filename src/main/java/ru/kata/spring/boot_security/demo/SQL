@@ -1,0 +1,20 @@
+INSERT INTO mydbtest.users (name, surname, age, email, password)
+VALUES
+	('admin', 'adminov', 30,'admin@mail.ru', '$2y$10$Yqo71ZgaOkl3qy/lZlMYA.7xHm3ZR2ECx1atjyGZdYVkbqeBMPjFu'),
+	('user', 'userov', 40, 'user@mail.ru', '$2y$10$WTN8mYAygahW2EffhOu/D.JdKuFxdbZE52KifS5rdYnDD9MsSl40S'),
+	('user1', 'userov1',  20, 'user1@mail.ru', '$2y$10$azSWrYC.kaYDWkzXmUVi/.pK3vlQt6FaAhhwZYmTdKRd5/8urdiS6'),
+	('q', 'q', 10, 'q', '$2y$10$ANdAFfOkLl87i1jlHy4dU.tZeW9EzwKH0983h1fdG/FZHYjBlUWjG'),
+    ('w', 'w', 20,  'w', '$2y$10$Phlvi07OypS/8spXVi0jHOkLobE0kszi8sp202hZTx5EXeUMEqv8K');
+
+INSERT INTO mydbtest.roles (name)
+VALUES
+	('ROLE_USER'),
+	('ROLE_ADMIN');
+
+INSERT INTO mydbtest.users_roles (user_id, role_id)
+VALUES
+	(1, 2),
+    (2, 1),
+    (3, 1),
+    (4, 2),
+    (5, 1);
