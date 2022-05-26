@@ -11,6 +11,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RestController
+
 public class MyRestController {
     private final UserService userService;
     private final UserRepository userRepository;
@@ -19,6 +20,8 @@ public class MyRestController {
         this.userService = userService;
         this.userRepository = userRepository;
     }
+
+    //сделать два контрллера отделбно для юзера и для админа
 
     //для юзера
     @GetMapping("/api/user")

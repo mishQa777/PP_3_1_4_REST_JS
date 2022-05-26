@@ -8,16 +8,20 @@ import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.UserService;
 
+import javax.transaction.Transactional;
 import java.security.Principal;
 import java.util.Set;
 
 @Controller
+@Transactional
 public class MyController {
 
     private final UserService userService;
     public MyController(UserService userService) {
         this.userService = userService;
     }
+
+    //сделать два контрллера отделбно для юзера и для админа
 
     // для юзера
     @GetMapping("/user")
